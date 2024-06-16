@@ -8,6 +8,7 @@ export default function Navbar(props) {
       data-bs-theme={props.mode}
     >
       <div className="container-fluid">
+        <img className="mx-1" alt="Logo" src={`${process.env.PUBLIC_URL}/favicon-32x32.png`}/>
         <a className="navbar-brand" href="/">
           {props.title}
         </a>
