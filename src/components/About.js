@@ -11,7 +11,7 @@ export default function About(props) {
         if (props.mode === "dark") {
           setMyStyle({
             color: 'white',
-            backgroundColor: 'rgba(1,1,1,0.95)'
+            backgroundColor: 'rgb(33, 37, 41)'
           });
         } else {
           setMyStyle({
@@ -48,7 +48,7 @@ export default function About(props) {
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            What is TextWiz?
+                           <strong>What is TextWiz?</strong>
                         </button>
                     </h2>
                     <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -58,11 +58,21 @@ export default function About(props) {
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed" type="button" style={myStyle} data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            What features do we provide?
+                            <strong>What features do we provide?</strong>
                         </button>
                     </h2>
                     <div id="flush-collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div className="accordion-body" style={myStyle}>We provide features like text conversion, text summarization,text enhancing and many more.</div>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header">
+                        <button className="accordion-button collapsed" type="button" style={myStyle} data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <strong>Is it free to use?</strong>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body" style={myStyle}>TextWiz is absolutely free to use.</div>
                     </div>
                 </div>
             </div>

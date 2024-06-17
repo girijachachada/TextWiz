@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
@@ -9,7 +9,7 @@ export default function Navbar(props) {
       data-bs-theme={props.mode}
     >
       <div className="container-fluid">
-        <img className="mx-1" alt="Logo" src={`${process.env.PUBLIC_URL}/favicon-32x32.png`}/>
+        <img className="mx-2" alt="Logo" src={`${process.env.PUBLIC_URL}/favicon-32x32.png`}/>
         <Link className="navbar-brand" to="/">
           {props.title}
         </Link>
@@ -27,11 +27,11 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link" aria-current="page" to="/">
                 Home
               </Link>
             </li>
-            <li classNameName="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/about">
                 {props.aboutText}
               </Link>
@@ -56,7 +56,7 @@ export default function Navbar(props) {
               id="flexSwitchCheckDefault"
               onClick={props.toggleMode}
             />
-            <label className="form-check-label" for="flexSwitchCheckDefault">
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
               Dark Mode
             </label>
           </div>
@@ -66,12 +66,12 @@ export default function Navbar(props) {
   );
 }
 
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  aboutText: PropTypes.string.isRequired,
-};
+// Navbar.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   aboutText: PropTypes.string.isRequired,
+// };
 
-Navbar.defaultProps = {
-  title: "Set Title Here",
-  aboutText: "About",
-};
+// Navbar.defaultProps = {
+//   title: "Set Title Here",
+//   aboutText: "About",
+// };
